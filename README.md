@@ -60,61 +60,6 @@ The application uses a consistent set of breakpoints throughout:
 @media (min-width: 1280px) { ... }
 ```
 
-### Project Structure
-
-west-auctions/
-├── app/                    # Next.js App Router pages and API routes
-│   ├── api/                # Backend API endpoints
-│   │   ├── auctions/       # Auction-related endpoints
-│   │   └── bids/           # Bidding-related endpoints
-│   ├── globals.css         # Global styles
-│   ├── layout.tsx          # Root layout component
-│   ├── page.tsx            # Home page component
-│   └── providers.tsx       # Context providers
-├── components/             # Reusable UI components
-│   ├── AuctionCard/        # Auction item display
-│   ├── Breadcrumbs/        # Navigation breadcrumbs
-│   ├── Button/             # Reusable button component
-│   ├── CategoryNav/        # Category navigation
-│   ├── FeaturedAuction/    # Featured auction display
-│   ├── Header/             # Application header
-│   ├── Layout/             # Main layout wrapper
-│   ├── LocationsSection/   # Location-based filtering
-│   └── SearchBar/          # Search functionality
-├── data/                   # Mock data for development
-│   └── mockAuctions.ts     # Sample auction data
-├── hooks/                  # Custom React hooks
-│   ├── useAppDispatch.ts   # Typed Redux dispatch hook
-│   ├── useAppSelector.ts   # Typed Redux selector hook
-│   ├── useAuction.ts       # Auction data and countdown hook
-│   └── useCountdown.ts     # Timer countdown hook
-├── pages/                  # Page components
-│   └── HomePage/           # Home page implementation
-├── public/                 # Static assets
-│   └── images/             # Image assets
-├── services/               # API and business logic
-│   └── auctionService.ts   # Auction data service
-├── store/                  # Redux store configuration
-│   ├── slices/             # Redux slices for state management
-│   │   ├── auctionsSlice.ts    # Auction state management
-│   │   ├── savedItemsSlice.ts  # Saved items state
-│   │   ├── uiSlice.ts          # UI state management
-│   │   └── userSlice.ts        # User state management
-│   ├── index.ts            # Store configuration
-│   ├── store.ts            # Store instance
-│   └── StoreProvider.tsx   # Redux provider component
-├── types/                  # TypeScript type definitions
-│   ├── auction.ts          # Auction-related types
-│   └── common.ts           # Shared type definitions
-├── utils/                  # Utility functions
-│   └── formatters.ts       # Date and currency formatters
-├── .eslintrc.json         # ESLint configuration
-├── next.config.mjs         # Next.js configuration
-├── package.json           # Project dependencies
-├── README.md              # Project documentation
-├── tailwind.config.ts     # Tailwind CSS configuration
-└── tsconfig.json          # TypeScript configuration
-
 ### Rationale for Structure
 
 The project structure was carefully designed with the following principles in mind:
